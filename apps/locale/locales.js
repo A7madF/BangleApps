@@ -587,7 +587,8 @@ var locales = {
     trans: { yes: "sim", Yes: "Sim", no: "não", No: "Não", ok: "ok", on: "on", off: "off" }
   },
     },
-  "ar_AR": {
+  /*
+    "ar_AR": {
     lang: "ar_AR",
     decimal_point: ",",
     thousands_sep: " ",
@@ -605,7 +606,7 @@ var locales = {
     day: "الأحد,الإثنين,الثلاثاء,الأربعاء,الخميس,الجمعة,السبت",
     trans: { yes: "نعم", Yes: "نعم", no: "لا", No: "لا", ok: "موافق", on: "فعل", off: "اقفل" }
   },
-/*,
+,
   "he_IL": { // This won't work until we get a font - see https://github.com/espruino/BangleApps/issues/399
     codePage : "ISO8859-8",
     lang: "he_IL",
