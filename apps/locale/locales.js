@@ -586,8 +586,7 @@ var locales = {
     day: "Domingo,Segunda-feira,Terça-feira,Quarta-feira,Quinta-feira,Sexta-feira,Sábado",
     trans: { yes: "sim", Yes: "Sim", no: "não", No: "Não", ok: "ok", on: "on", off: "off" }
   },
-    },
-  /*
+/*
     "ar_AR": {
     lang: "ar_AR",
     decimal_point: ",",
