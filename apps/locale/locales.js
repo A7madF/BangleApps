@@ -586,6 +586,24 @@ var locales = {
     day: "Domingo,Segunda-feira,Terça-feira,Quarta-feira,Quinta-feira,Sexta-feira,Sábado",
     trans: { yes: "sim", Yes: "Sim", no: "não", No: "Não", ok: "ok", on: "on", off: "off" }
   },
+  "ar_AR": { // this is default
+    lang: "ar_AR",
+    decimal_point: ".",
+    thousands_sep: ",",
+    currency_symbol: "SAR", currency_first: true,
+    int_curr_symbol: "SAR",
+    speed: 'kph',
+    distance: { "0": "m", "1": "km" },
+    temperature: '°C',
+    ampm: { 0: "am", 1: "pm" },
+    timePattern: { 0: "%HH:%MM:%SS ", 1: "%HH:%MM" },
+    datePattern: { 0: "%b %d %Y", 1: "%d/%m/%Y" }, // Feb 28 2020" // "01/03/2020"(short)
+    //abmonth: "Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec",
+    month: "Muharram,Safar,Rabi Al-Awwal,Rabi Al-Thani,Jamada Al-Awwal,Jumādā Al-Akhirah,Rajab,Shaban,Ramadan,Shawwal,Du al-Qedah,Du al-Hijjah",
+    //abday: "Sun,Mon,Tue,Wed,Thu,Fri,Sat",
+    day: "Al-Ahad,Al-Ithnayn,Ath-Thulatha,Al-Arbia,Al-Khamis,Al-Jumah,As-Sabt",
+    // No translation for english...
+  },
 /*,
   "he_IL": { // This won't work until we get a font - see https://github.com/espruino/BangleApps/issues/399
     codePage : "ISO8859-8",
