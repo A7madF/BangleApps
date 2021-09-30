@@ -586,26 +586,7 @@ var locales = {
     day: "Domingo,Segunda-feira,Terça-feira,Quarta-feira,Quinta-feira,Sexta-feira,Sábado",
     trans: { yes: "sim", Yes: "Sim", no: "não", No: "Não", ok: "ok", on: "on", off: "off" }
   },
-/*
-    "ar_AR": {
-    lang: "ar_AR",
-    decimal_point: ",",
-    thousands_sep: " ",
-    currency_symbol: "SAR",
-    int_curr_symbol: "SAR",
-    speed: "كيلو متر لكل ساعة",
-    distance: { 0: "متر", 1: "كيلو متر" },
-    temperature: "°C",
-    ampm: { 0: "am", 1: "pm" },
-    timePattern: { 0: "%HH:%MM:%SS ", 1: "%HH:%MM" },
-    datePattern: { 0: "%d %b %Y", 1: "%d/%m/%y" },
-   // abmonth: "Jan,Fev,Mar,Abr,Mai,Jun,Jul,Ago,Set,Out,Nov,Dez",
-    month: "محرم,صفر,ربيع الأول,ربيع الثاني,جمادى الألى,جمادى الاخرة,رجب,شعبان,رمضان,شوال,ذو القعدة,ذو الحجة",
-    //abday: "Dom,Seg,Ter,Qua,Qui,Sex,Sab",
-    day: "الأحد,الإثنين,الثلاثاء,الأربعاء,الخميس,الجمعة,السبت",
-    trans: { yes: "نعم", Yes: "نعم", no: "لا", No: "لا", ok: "موافق", on: "فعل", off: "اقفل" }
-  },
-,
+/*,
   "he_IL": { // This won't work until we get a font - see https://github.com/espruino/BangleApps/issues/399
     codePage : "ISO8859-8",
     lang: "he_IL",
