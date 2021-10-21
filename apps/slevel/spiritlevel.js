@@ -60,13 +60,15 @@ setWatch(() => {
   updateScreen();
 }, BTN2, {repeat:true});
   
-  if(ang > 10 && ang < 21){
+  if(ang > 10){
+    if(ang < 21){
   counter += 1;
   if(counter==7){
     //g.drawImage(require("Storage").read("am.img"),56,27);
     counter=7;
   }
   updateScreen();
+    }
 }
 });
 
