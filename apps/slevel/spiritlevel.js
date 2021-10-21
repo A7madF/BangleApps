@@ -49,11 +49,12 @@ setWatch(() => {
   updateScreen();
 }, BTN3, {repeat:true});
 
-if(ang === 180){
-    counter -= 1;
-  g.clear();
-  if(counter==-1){
-    counter=0;}
+if(ang > 10 && ang < 21){
+  counter += 1;
+  if(counter==7){
+    //g.drawImage(require("Storage").read("am.img"),56,27);
+    counter=7;
+  }
   updateScreen();
 }
 
