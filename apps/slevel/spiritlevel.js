@@ -10,6 +10,15 @@ Bangle.on('accel',function(v) {
 
   var d = Math.sqrt(v.x*v.x+v.y*v.y);
   var ang = Math.atan2(d,Math.abs(v.z))*180/Math.PI;
+  
+  if(ang > 10 && ang < 21){
+  counter += 1;
+  if(counter==7){
+    //g.drawImage(require("Storage").read("am.img"),56,27);
+    counter=7;
+  }
+  updateScreen();
+}
 });
 
 Bangle.setLCDPower(1);
@@ -49,14 +58,7 @@ setWatch(() => {
   updateScreen();
 }, BTN3, {repeat:true});
 
-if(ang > 10 && ang < 21){
-  counter += 1;
-  if(counter==7){
-    //g.drawImage(require("Storage").read("am.img"),56,27);
-    counter=7;
-  }
-  updateScreen();
-}
+
 
 setWatch(() => {
   g.clear();
