@@ -44,7 +44,7 @@ function clear_previous() {
   previous.wp_name = '-';
   previous.course = -999;
 }
-/*
+
 function drawCompass(course) {
   if(!candraw) return;
   if (Math.abs(previous.course - course) < 9) return; // reduce number of draws due to compass jitter
@@ -59,7 +59,7 @@ function drawCompass(course) {
   flip1(40, 30);
 }
 
-
+/***** COMPASS CODE ***********/
 
 var heading = 0;
 function newHeading(m,h){ 
@@ -104,7 +104,7 @@ function read_compass() {
 }
 
 
-*/
+/***** END Compass ***********/
 
 var speed = 0;
 var satellites = 0;
