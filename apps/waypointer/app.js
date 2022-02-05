@@ -160,11 +160,7 @@ function onGPS(fix) {
 
 var intervalRef;
 
-function stopdraw() {
-  candraw=false;
-  prev_course = -1;
-  if(intervalRef) {clearInterval(intervalRef);}
-}
+
 
 function startTimers() {
   candraw=true;
@@ -173,19 +169,8 @@ function startTimers() {
   }, 500);
 }
 
-function drawAll(){
-  g.setColor(1,1,1);
-  drawN();
-  drawCompass(direction);
-}
 
-function startdraw(){
-  g.clear();
-  Bangle.drawWidgets();
-  startTimers();
-  candraw=true;
-  drawAll();
-}
+
 
 function setButtons(){
   setWatch(nextwp.bind(null,-1), BTN1, {repeat:true,edge:"falling"});
