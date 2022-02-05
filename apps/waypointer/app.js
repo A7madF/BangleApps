@@ -61,47 +61,6 @@ function drawCompass(course) {
 
 /***** COMPASS CODE ***********/
 
-var heading = 0;
-function newHeading(m,h){ 
-    var s = Math.abs(m - h);
-    var delta = (m>h)?1:-1;
-    if (s>=180){s=360-s; delta = -delta;} 
-    if (s<2) return h;
-    var hd = h + delta*(1 + Math.round(s/5));
-    if (hd<0) hd+=360;
-    if (hd>360)hd-= 360;
-    return hd;
-}
-
-var CALIBDATA = require("Storage").readJSON("magnav.json",1)||null;
-
-function tiltfixread(O,S){
-  var start = Date.now();
-  var m = Bangle.getCompass();
-  var g = Bangle.getAccel();
-  m.dx =(m.x-O.x)*S.x; m.dy=(m.y-O.y)*S.y; m.dz=(m.z-O.z)*S.z;
-  var d = Math.atan2(-m.dx,m.dy)*180/Math.PI;
-  if (d<0) d+=360;
-  var phi = Math.atan(-g.x/-g.z);
-  var cosphi = Math.cos(phi), sinphi = Math.sin(phi);
-  var theta = Math.atan(-g.y/(-g.x*sinphi-g.z*cosphi));
-  var costheta = Math.cos(theta), sintheta = Math.sin(theta);
-  var xh = m.dy*costheta + m.dx*sinphi*sintheta + m.dz*cosphi*sintheta;
-  var yh = m.dz*sinphi - m.dx*cosphi;
-  var psi = Math.atan2(yh,xh)*180/Math.PI;
-  if (psi<0) psi+=360;
-  return psi;
-}
-
-// Note actual mag is 360-m, error in firmware
-function read_compass() {
-  var d = tiltfixread(CALIBDATA.offset,CALIBDATA.scale);
-  heading = newHeading(d,heading);
-  direction = wp_bearing - heading;
-  if (direction < 0) direction += 360;
-  if (direction > 360) direction -= 360;
-  drawCompass(direction);
-}
 
 
 /***** END Compass ***********/
