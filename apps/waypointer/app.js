@@ -45,19 +45,7 @@ function clear_previous() {
   previous.course = -999;
 }
 
-function drawCompass(course) {
-  if(!candraw) return;
-  if (Math.abs(previous.course - course) < 9) return; // reduce number of draws due to compass jitter
-  previous.course = course;
-  
-  buf1.setColor(1);
-  buf1.fillCircle(80,80,79,79);
-  buf1.setColor(0);
-  buf1.fillCircle(80,80,69,69);
-  buf1.setColor(1);
-  buf1.drawImage(arrow_img, 80, 80, {scale:3,  rotate:radians(course)} );
-  flip1(40, 30);
-}
+
 
 /***** COMPASS CODE ***********/
 
