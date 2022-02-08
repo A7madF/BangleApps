@@ -11,12 +11,10 @@ var pal_bb = new Uint16Array([0x0000,0x07ff],0,1); // black, blue
   g.drawImage({width:160,height:160,bpp:1,buffer:buf1.buffer, palette:pal_by},x,y);
   buf1.clear();
 }
-
 function flip2_bw(x,y) {
   g.drawImage({width:80,height:40,bpp:1,buffer:buf2.buffer, palette:pal_bw},x,y);
   buf2.clear();
 }
-
 function flip2_bb(x,y) {
   g.drawImage({width:80,height:40,bpp:1,buffer:buf2.buffer, palette:pal_bb},x,y);
   buf2.clear();
@@ -60,7 +58,6 @@ function clear_previous() {
 } */
 
 /*
-
 var heading = 0;
 function newHeading(m,h){ 
     var s = Math.abs(m - h);
@@ -72,9 +69,7 @@ function newHeading(m,h){
     if (hd>360)hd-= 360;
     return hd;
 }
-
 var CALIBDATA = require("Storage").readJSON("magnav.json",1)||null;
-
 function tiltfixread(O,S){
   var start = Date.now();
   var m = Bangle.getCompass();
@@ -92,7 +87,6 @@ function tiltfixread(O,S){
   if (psi<0) psi+=360;
   return psi;
 }
-
 // Note actual mag is 360-m, error in firmware
 function read_compass() {
   var d = tiltfixread(CALIBDATA.offset,CALIBDATA.scale);
@@ -102,7 +96,6 @@ function read_compass() {
   if (direction > 360) direction -= 360;
   drawCompass(direction);
 }
-
 */
 
 var speed = 0;
@@ -163,14 +156,6 @@ function drawN(){
     buf2.drawString(bs,40,0);
     flip2_bw(80, 200);
   }
-  /*
-  if(previous.dst < 8){
-    buf2.setColor(1);
-    buf2.setFontAlign(0, -1);
-    buf2.setFont("Vector",38);
-    buf2.drawString("Mina",40,100); 
-  }
-  */
 
   // waypoint name on right
   if (previous.wp_name !== wp.name || previous.selected !== selected) {
