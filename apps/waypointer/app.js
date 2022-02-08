@@ -163,13 +163,14 @@ function drawN(){
     buf2.drawString(bs,40,0);
     flip2_bw(80, 200);
   }
-  
+  /*
   if(previous.dst < 8){
     buf2.setColor(1);
     buf2.setFontAlign(0, -1);
     buf2.setFont("Vector",38);
     buf2.drawString("Mina",40,100); 
   }
+  */
 
   // waypoint name on right
   if (previous.wp_name !== wp.name || previous.selected !== selected) {
