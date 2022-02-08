@@ -3,22 +3,24 @@ var pal_bw = new Uint16Array([0x0000,0xffff],0,1);  // black, white
 var pal_bb = new Uint16Array([0x0000,0x07ff],0,1); // black, blue
 
 // having 3 2 color pallette keeps the memory requirement lower
-//var buf1 = Graphics.createArrayBuffer(160,160,1, {msb:true});
-//var buf2 = Graphics.createArrayBuffer(80,40,1, {msb:true});
-//var arrow_img = require("heatshrink").decompress(atob("lEowIPMjAEDngEDvwED/4DCgP/wAEBgf/4AEBg//8AEBh//+AEBj///AEBn///gEBv///wmCAAImCAAIoBFggE/AkaaEABo="));
+var buf1 = Graphics.createArrayBuffer(160,160,1, {msb:true});
+var buf2 = Graphics.createArrayBuffer(80,40,1, {msb:true});
+var arrow_img = require("heatshrink").decompress(atob("lEowIPMjAEDngEDvwED/4DCgP/wAEBgf/4AEBg//8AEBh//+AEBj///AEBn///gEBv///wmCAAImCAAIoBFggE/AkaaEABo="));
 
-/*function flip1(x,y) {
+function flip1(x,y) {
   g.drawImage({width:160,height:160,bpp:1,buffer:buf1.buffer, palette:pal_by},x,y);
   buf1.clear();
 }
+
 function flip2_bw(x,y) {
   g.drawImage({width:80,height:40,bpp:1,buffer:buf2.buffer, palette:pal_bw},x,y);
   buf2.clear();
 }
+
 function flip2_bb(x,y) {
   g.drawImage({width:80,height:40,bpp:1,buffer:buf2.buffer, palette:pal_bb},x,y);
   buf2.clear();
-}*/
+}
 
 var candraw = true;
 var wp_bearing = 0;
@@ -43,7 +45,7 @@ function clear_previous() {
   previous.course = -999;
 }
 
-/*function drawCompass(course) {
+function drawCompass(course) {
   if(!candraw) return;
   if (Math.abs(previous.course - course) < 9) return; // reduce number of draws due to compass jitter
   previous.course = course;
@@ -55,9 +57,10 @@ function clear_previous() {
   buf1.setColor(1);
   buf1.drawImage(arrow_img, 80, 80, {scale:3,  rotate:radians(course)} );
   flip1(40, 30);
-} */
+}
 
-/*
+/***** COMPASS CODE ***********/
+
 var heading = 0;
 function newHeading(m,h){ 
     var s = Math.abs(m - h);
@@ -69,7 +72,9 @@ function newHeading(m,h){
     if (hd>360)hd-= 360;
     return hd;
 }
+
 var CALIBDATA = require("Storage").readJSON("magnav.json",1)||null;
+
 function tiltfixread(O,S){
   var start = Date.now();
   var m = Bangle.getCompass();
@@ -87,6 +92,7 @@ function tiltfixread(O,S){
   if (psi<0) psi+=360;
   return psi;
 }
+
 // Note actual mag is 360-m, error in firmware
 function read_compass() {
   var d = tiltfixread(CALIBDATA.offset,CALIBDATA.scale);
@@ -96,7 +102,9 @@ function read_compass() {
   if (direction > 360) direction -= 360;
   drawCompass(direction);
 }
-*/
+
+
+/***** END Compass ***********/
 
 var speed = 0;
 var satellites = 0;
