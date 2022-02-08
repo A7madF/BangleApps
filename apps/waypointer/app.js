@@ -22,8 +22,6 @@ function flip2_bb(x,y) {
   buf2.clear();
 }
 
-
-
 var candraw = true;
 var wp_bearing = 0;
 var direction = 0;
@@ -61,7 +59,7 @@ function drawCompass(course) {
   flip1(40, 30);
 }
 
-
+/***** COMPASS CODE ***********/
 
 var heading = 0;
 function newHeading(m,h){ 
@@ -74,7 +72,6 @@ function newHeading(m,h){
     if (hd>360)hd-= 360;
     return hd;
 }
-
 
 var CALIBDATA = require("Storage").readJSON("magnav.json",1)||null;
 
@@ -107,6 +104,7 @@ function read_compass() {
 }
 
 
+/***** END Compass ***********/
 
 var speed = 0;
 var satellites = 0;
