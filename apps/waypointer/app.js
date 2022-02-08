@@ -74,9 +74,10 @@ function newHeading(m,h){
     if (hd>360)hd-= 360;
     return hd;
 }
+*/
 
 var CALIBDATA = require("Storage").readJSON("magnav.json",1)||null;
-
+/*
 function tiltfixread(O,S){
   var start = Date.now();
   var m = Bangle.getCompass();
