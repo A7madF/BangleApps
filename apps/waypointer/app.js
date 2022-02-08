@@ -5,8 +5,8 @@ var pal_bb = new Uint16Array([0x0000,0x07ff],0,1); // black, blue
 // having 3 2 color pallette keeps the memory requirement lower
 var buf1 = Graphics.createArrayBuffer(160,160,1, {msb:true});
 var buf2 = Graphics.createArrayBuffer(80,40,1, {msb:true});
-var arrow_img = require("heatshrink").decompress(atob("lEowIPMjAEDngEDvwED/4DCgP/wAEBgf/4AEBg//8AEBh//+AEBj///AEBn///gEBv///wmCAAImCAAIoBFggE/AkaaEABo="));
-
+//var arrow_img = require("heatshrink").decompress(atob("lEowIPMjAEDngEDvwED/4DCgP/wAEBgf/4AEBg//8AEBh//+AEBj///AEBn///gEBv///wmCAAImCAAIoBFggE/AkaaEABo="));
+/*
 function flip1(x,y) {
   g.drawImage({width:160,height:160,bpp:1,buffer:buf1.buffer, palette:pal_by},x,y);
   buf1.clear();
@@ -21,6 +21,7 @@ function flip2_bb(x,y) {
   g.drawImage({width:80,height:40,bpp:1,buffer:buf2.buffer, palette:pal_bb},x,y);
   buf2.clear();
 }
+*/
 
 
 var candraw = true;
@@ -60,7 +61,7 @@ function drawCompass(course) {
   flip1(40, 30);
 }
 */
-/*
+
 
 var heading = 0;
 function newHeading(m,h){ 
@@ -104,7 +105,7 @@ function read_compass() {
   drawCompass(direction);
 }
 
-*/
+
 
 var speed = 0;
 var satellites = 0;
