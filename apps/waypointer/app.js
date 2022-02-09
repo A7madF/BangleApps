@@ -58,7 +58,7 @@ function drawCompass(course) {
   buf1.drawImage(arrow_img, 80, 80, {scale:3,  rotate:radians(course)} );
   flip1(40, 30);
 }
-*/
+
 /***** COMPASS CODE ***********/
 
 var heading = 0;
