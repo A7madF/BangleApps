@@ -167,7 +167,7 @@ function drawN(){
   
   if(dst < 4){
     g.setFont("Vector", 25);
-    g.drawString(selected,40,100); 
+    g.drawString(wp.name,40,100); 
   }else{
     g.setFont("Vector", 25);
     g.drawString("",40,100);
