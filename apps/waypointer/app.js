@@ -165,7 +165,7 @@ function drawN(){
     flip2_bw(80, 200);
   }
   
-  if(parseInt(previous.dst) < 4){
+  if(dst < 4){
     buf2.setColor(1);
     buf2.setFontAlign(0, -1);
     buf2.setFont("Vector",38);
