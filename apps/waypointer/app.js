@@ -169,7 +169,7 @@ function drawN(){
     g.setFont("Vector", 25);
     g.drawString("Mina",40,100); 
   }else{
-    g.clear(1).setFont("Vector", 25);
+    g.setFont("Vector", 25);
     g.drawString("",40,100);
   }
 
