@@ -165,7 +165,7 @@ function drawN(){
     flip2_bw(80, 200);
   }
   
-  if(dst < 4){
+  if(dst < 5){
     g.setFont("Vector", 25);
     g.drawString(wp.name,40,100); 
   }else{
