@@ -168,6 +168,9 @@ function drawN(){
   if(dst < 4){
     g.setFont("6x8");
     g.drawString("Mina",40,100); 
+  }else{
+    g.setFont("6x8");
+    g.drawString("",40,100);
   }
 
   
