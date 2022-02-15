@@ -166,13 +166,17 @@ function drawN(){
   }
   
   if(dst < 5){
+    
+    updateScreen();
     g.setFont("Vector", 25);
     g.drawString(wp.name,40,100); 
-    //updateScreen();
+    
   }else{
+    
+    updateScreen();
     g.setFont("Vector", 25);
     g.drawString("",40,100);
-    //updateScreen();
+    
   }
 
   
